@@ -5,26 +5,28 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/06/13 19:04:12 by qle-guen          #+#    #+#             */
-/*   Updated: 2016/06/13 21:26:14 by qle-guen         ###   ########.fr       */
+/*   Created: 2016/06/16 19:39:36 by qle-guen          #+#    #+#             */
+/*   Updated: 2016/06/16 22:21:29 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libvect.h"
-#include "../lib/libft/includes/libft.h"
+#include <libvect.h>
+#include <libft.h>
+#include <stdio.h>
 
 int main()
 {
 	t_vect *v;
+	char *s;
 
-	v = vect_init(NULL, 1);
-	if (!v)
-		return 1;
-	vect_add(v, "42 ", 3);
-	vect_add(v, "born ", 5);
-	vect_add(v, "to", 2);
-	vect_add(v, " code", 5);
-	vect_add(v, "\n", 1);
-	write(1, v->data, v->used);
-	ft_putnbr(v->total);
+	v = NULL;
+	vect_push(&v, "2 born", 6, 0);
+	vect_push(&v, "4", 1, 0);
+	vect_add(&v, " to code", 8);
+	vect_push(&v, "qle-guen", 8, 0);
+	vect_push(&v, ":", 1, 8);
+	s = vect_getstr(v);
+	printf("%s", s);
+	vect_del(&v);
+	free(s);
 }
