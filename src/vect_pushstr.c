@@ -1,40 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   vect_pushstr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/06/16 19:39:36 by qle-guen          #+#    #+#             */
-/*   Updated: 2016/06/17 11:02:23 by qle-guen         ###   ########.fr       */
+/*   Created: 2016/06/17 10:58:12 by qle-guen          #+#    #+#             */
+/*   Updated: 2016/06/17 10:59:27 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libvect.h>
 #include <libft.h>
-#include <stdio.h>
 
-int main()
+int			vect_pushstr
+	(t_vect **v, char *s, size_t n)
 {
-	t_vect *v;
-	char *s;
-
-	v = NULL;
-	vect_addstr(&v, "qle-guen");
-	vect_addstr(&v, " = ");
-	vect_addstr(&v, "42n");
-	vect_pushstr(&v, "bor", 13);
-	vect_pushstr(&v, "<", 0);
-	vect_pushstr(&v, ">", 9);
-	vect_addstr(&v, "2code");
-	s = vect_getstr(v);
-	vect_del(&v);
-	if (!(ft_strequ(s, "<qle-guen> = 42born2code")))
-	{
-		ft_putstr("error, got: ");
-		ft_putendl(s);
-		return (1);
-	}
-	ft_putendl("OK");
-	return (0);
+	return (vect_push(v, s, ft_strlen(s), n));
 }

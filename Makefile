@@ -7,7 +7,6 @@ DEPSDIR		?=	lib
 INCLUDE		+=	includes
 INCLUDE		+=	$(addsuffix /includes,$(LIBS))
 NAME		=	libvect.a
-TARGET		=	$(BINDIR)/$(NAME)
 
 # Compiler options
 CC			=	clang
@@ -41,7 +40,7 @@ $(BUILDDIR)/%.o: $(SRCDIR)/%.c
 	$(CC) $(CFLAGS) -c $< -o $@
 	@echo $(GREEN)+++ obj:'\t'$(END)$(BUILDDIR)/$(YELLOW)'\t'$(@F)$(END)
 
-$(TARGET): $(LIBS) $(OBJECTS)
+$(NAME): $(LIBS) $(OBJECTS)
 	ar rc $(@) $(OBJECTS)
 	@echo $(GREEN)+++ target:'\t'$(END)$(BINDIR)/'\t'$(BLUE)$(NAME)$(END)
 
@@ -56,7 +55,7 @@ clean:
 	&& echo $(RED)--- obj:'\t'$(END)$(BUILDDIR)/'\t'$(YELLOW)$(OBJECTS:$(BUILDDIR)/%=%)$(END); true
 
 fclean: clean
-	@rm $(TARGET) 2> /dev/null \
+	@rm $(NAME) 2> /dev/null \
 	&& echo $(RED)--- target:'\t'$(END)$(BINDIR)'\t'$(BLUE)$(NAME)$(END); true
 
 re: fclean all
@@ -68,9 +67,8 @@ clean-deps:
 
 re-deps: clean-deps deps
 
-test:
+test: $(NAME)
 	@test/test.sh $(ARGS)
-	@test/test-functions-used.sh
 
 rendu:
 	@util/rendu.sh
