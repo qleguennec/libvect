@@ -6,13 +6,12 @@
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/13 18:40:19 by qle-guen          #+#    #+#             */
-/*   Updated: 2016/06/17 11:26:10 by qle-guen         ###   ########.fr       */
+/*   Updated: 2016/06/17 20:47:11 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libvect.h>
 #include <libft.h>
-#include <stdio.h>
 
 static int		copy_push
 	(t_vect *v, void *data, size_t size, size_t n)
