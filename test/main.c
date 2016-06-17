@@ -6,7 +6,7 @@
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/16 19:39:36 by qle-guen          #+#    #+#             */
-/*   Updated: 2016/06/17 11:34:52 by qle-guen         ###   ########.fr       */
+/*   Updated: 2016/06/17 23:27:07 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,13 @@ int main()
 	vect_addstr(&v, " = ");
 	vect_addstr(&v, "42n");
 	vect_pushstr(&v, "bor", 13);
-	vect_pushstr(&v, "<", 0);
-	vect_pushstr(&v, ">", 9);
+	vect_pushstr(&v, ">", 8);
 	vect_addstr(&v, "2code");
+	vect_memset(&v, '<', 5, 0);
+	vect_memset(&v, '=', 2, 16);
 	s = vect_getstr(v);
 	vect_del(&v);
-	if (!(ft_strequ(s, "<qle-guen> = 42born2code")))
+	if (!(ft_strequ(s, "<<<<<qle-guen> === 42born2code")))
 	{
 		ft_putstr("error, got: ");
 		ft_putendl(s);

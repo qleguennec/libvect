@@ -33,7 +33,7 @@ LIBSRC		+=	libft
 OBJECTS		=	$(addprefix $(BUILDDIR)/, $(SRC:%.c=%.o))
 LIBS		=	$(addprefix $(DEPSDIR)/, $(LIBSRC))
 
-all: $(TARGET)
+all: $(NAME)
 
 $(BUILDDIR)/%.o: $(SRCDIR)/%.c
 	@[ -d $(BUILDDIR) ] || mkdir $(BUILDDIR); true
