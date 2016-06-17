@@ -6,7 +6,7 @@
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/13 18:40:19 by qle-guen          #+#    #+#             */
-/*   Updated: 2016/06/16 23:59:34 by qle-guen         ###   ########.fr       */
+/*   Updated: 2016/06/17 10:38:07 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,5 +56,6 @@ int				vect_push
 		return (copy_push(w, data, size, n));
 	ft_memmove(w->data + n + size, w->data + n, w->used - n);
 	ft_memcpy(w->data + n, data, size);
+	w->used += size;
 	return (1);
 }
