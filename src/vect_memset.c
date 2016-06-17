@@ -6,7 +6,7 @@
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/13 18:40:19 by qle-guen          #+#    #+#             */
-/*   Updated: 2016/06/17 23:28:45 by qle-guen         ###   ########.fr       */
+/*   Updated: 2016/06/18 01:48:49 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ int				vect_memset
 		if (!vect_req(w, size))
 			return (0);
 		ft_memset(w->data + w->used, c, size);
+		w->used += size;
 		return (1);
 	}
 	if (!w->total)
