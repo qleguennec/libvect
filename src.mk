@@ -1,4 +1,5 @@
 SRC += vect_init.c
+SRC += vect_req.c
 SRC += vect_add.c
 SRC += vect_getstr.c
 SRC += vect_addstr.c
