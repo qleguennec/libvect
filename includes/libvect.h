@@ -6,7 +6,7 @@
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/10 16:01:26 by qle-guen          #+#    #+#             */
-/*   Updated: 2016/06/17 11:25:26 by qle-guen         ###   ########.fr       */
+/*   Updated: 2016/06/17 20:53:39 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ typedef struct	s_vect
 }				t_vect;
 
 t_vect			*vect_init(void *data, size_t size);
+t_vect			*vect_wrap(void *data, size_t size);
 int				vect_add(t_vect **v, void *data, size_t size);
 int				vect_addstr(t_vect **v, char *data);
 int				vect_push(t_vect **v, void *data, size_t size, size_t n);
