@@ -6,16 +6,16 @@
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/10 16:01:26 by qle-guen          #+#    #+#             */
-/*   Updated: 2016/06/16 22:18:38 by qle-guen         ###   ########.fr       */
+/*   Updated: 2016/06/16 23:27:56 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBVECT_H
 # define LIBVECT_H
 
-#define GROWTH_FACTOR 1.618
+# define GROWTH_FACTOR 1.618
 
-#include <stdlib.h>
+# include <stdlib.h>
 
 typedef struct	s_vect
 {
