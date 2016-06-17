@@ -6,7 +6,7 @@ LIBDIR		?=	$(BUILDDIR)
 DEPSDIR		?=	lib
 INCLUDE		+=	includes
 INCLUDE		+=	$(addsuffix /includes,$(LIBS))
-NAME		=	libvect.a
+NAME		=	$(BINDIR)/libvect.a
 
 # Compiler options
 CC			=	clang
