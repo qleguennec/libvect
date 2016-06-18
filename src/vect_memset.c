@@ -6,7 +6,7 @@
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/13 18:40:19 by qle-guen          #+#    #+#             */
-/*   Updated: 2016/06/18 12:59:49 by qle-guen         ###   ########.fr       */
+/*   Updated: 2016/06/18 13:06:37 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static int		copy_push
 	ft_memcpy(new + n + size, v->data + n, v->used - n);
 	free(v->data);
 	v->used += size;
-	v->data = new - v->used;
+	v->data = new;
 	return (1);
 }
 
