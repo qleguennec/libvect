@@ -6,7 +6,7 @@
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/13 18:40:19 by qle-guen          #+#    #+#             */
-/*   Updated: 2016/06/18 01:48:49 by qle-guen         ###   ########.fr       */
+/*   Updated: 2016/06/18 12:59:49 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ static int		copy_push
 		v->total *= GROWTH_FACTOR;
 	if (!(new = malloc(v->total)))
 		return (0);
-	ft_mempcpy(new, v->data, n);
+	ft_memcpy(new, v->data, n);
 	ft_memset(new + n, c, size);
-	ft_mempcpy(new + n + size, v->data + n, v->used - n);
+	ft_memcpy(new + n + size, v->data + n, v->used - n);
 	free(v->data);
 	v->used += size;
 	v->data = new - v->used;
