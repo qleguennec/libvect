@@ -6,7 +6,7 @@
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/13 18:40:19 by qle-guen          #+#    #+#             */
-/*   Updated: 2016/06/17 20:47:21 by qle-guen         ###   ########.fr       */
+/*   Updated: 2016/06/21 11:05:30 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,13 @@
 int				vect_add
 	(t_vect **v, void *data, size_t size)
 {
-	t_vect		*w;
-
 	if (!*v)
-		return ((*v = vect_init(data, size)) != NULL);
+		return (!!(*v = vect_init(data, size)));
 	if (!data)
 		return (0);
-	w = *v;
-	if (!vect_req(w, size))
+	if (!vect_req(v, size))
 		return (0);
-	ft_memcpy(w->data + w->used, data, size);
-	w->used += size;
+	ft_memcpy((*v)->data + (*v)->used, data, size);
+	(*v)->used += size;
 	return (1);
 }

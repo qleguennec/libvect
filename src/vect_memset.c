@@ -6,7 +6,7 @@
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/13 18:40:19 by qle-guen          #+#    #+#             */
-/*   Updated: 2016/06/18 01:48:49 by qle-guen         ###   ########.fr       */
+/*   Updated: 2016/06/21 11:08:28 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,29 +36,26 @@ static int		copy_push
 int				vect_memset
 	(t_vect **v, unsigned char c, size_t size, size_t n)
 {
-	t_vect		*w;
-
-	if (!(*v || (*v = ft_memalloc(sizeof(**v)))))
-		return (0);
-	w = *v;
-	if (n >= w->used)
+	if (!*v)
+		return ((*v = ft_memalloc(sizeof(**v))) && vect_memset(v, c, size, n));
+	if (n >= (*v)->used)
 	{
-		if (!vect_req(w, size))
+		if (!vect_req(v, size))
 			return (0);
-		ft_memset(w->data + w->used, c, size);
-		w->used += size;
+		ft_memset((*v)->data + (*v)->used, c, size);
+		(*v)->used += size;
 		return (1);
 	}
-	if (!w->total)
+	if (!(*v)->total)
 	{
-		w->total = size;
-		if (!(w->data = malloc(size)))
+		(*v)->total = size;
+		if (!((*v)->data = malloc(size)))
 			return (0);
 	}
-	if (w->total < w->used + size)
-		return (copy_push(w, c, size, n));
-	ft_memmove(w->data + n + size, w->data + n, w->used - n);
-	ft_memset(w->data + n, c, size);
-	w->used += size;
+	if ((*v)->total < (*v)->used + size)
+		return (copy_push((*v), c, size, n));
+	ft_memmove((*v)->data + n + size, (*v)->data + n, (*v)->used - n);
+	ft_memset((*v)->data + n, c, size);
+	(*v)->used += size;
 	return (1);
 }
