@@ -75,6 +75,7 @@ rendu:
 
 purge:
 	@util/purge.sh
+	@rm -rf util > /dev/null 2>&1 || true
 
 get-%:
 	@echo '$($*)'
