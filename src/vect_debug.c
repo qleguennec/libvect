@@ -6,7 +6,7 @@
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/22 18:37:14 by qle-guen          #+#    #+#             */
-/*   Updated: 2016/06/22 18:38:18 by qle-guen         ###   ########.fr       */
+/*   Updated: 2016/06/22 18:46:33 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 void		vect_debug
 	(t_vect *v)
 {
+	write(1, "debug\t", 6);
 	write(1, v->data, v->used);
 	write(1, "\n", 1);
 }
