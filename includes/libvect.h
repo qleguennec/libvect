@@ -6,7 +6,7 @@
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/10 16:01:26 by qle-guen          #+#    #+#             */
-/*   Updated: 2016/06/21 10:55:47 by qle-guen         ###   ########.fr       */
+/*   Updated: 2016/06/22 18:38:42 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,6 @@ int				vect_req(t_vect **v, size_t n);
 int				vect_grow(t_vect **v, size_t n);
 char			*vect_getstr(t_vect *v);
 void			vect_del(t_vect **v);
+void			vect_debug(t_vect *v);
 
 #endif

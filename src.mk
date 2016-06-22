@@ -9,3 +9,4 @@ SRC += vect_push.c
 SRC += vect_memset.c
 SRC += vect_pushstr.c
 SRC += vect_del.c
+SRC += vect_debug.c
