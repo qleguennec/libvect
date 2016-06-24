@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vect_add.c                                         :+:      :+:    :+:   */
+/*   vect_mset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/13 18:40:19 by qle-guen          #+#    #+#             */
-/*   Updated: 2016/06/24 18:30:43 by qle-guen         ###   ########.fr       */
+/*   Updated: 2016/06/24 18:40:16 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static int		copy_push
 	return (1);
 }
 
-int				vect_memset
+int				vect_mset
 	(t_vect *v, unsigned char c, size_t size, size_t n)
 {
 	if (n >= v->used)

@@ -6,7 +6,7 @@
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/16 19:39:36 by qle-guen          #+#    #+#             */
-/*   Updated: 2016/06/24 18:32:05 by qle-guen         ###   ########.fr       */
+/*   Updated: 2016/06/24 18:41:57 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ int main()
 	vect_pushstr(v, "bor", 13);
 	vect_pushstr(v, ">", 8);
 	vect_addstr(v, "2code");
-	vect_memset(v, '<', 5, 0);
-	vect_memset(v, '=', 2, 16);
+	vect_mset(v, '<', 5, 0);
+	vect_mset(v, '=', 2, 16);
 	s = vect_getstr(v);
 	vect_del(v);
 	if (!(ft_strequ(s, "<<<<<qle-guen> === 42born2code")))
