@@ -5,6 +5,7 @@ SRC += vect_wrap.c
 SRC += vect_getstr.c
 SRC += vect_addstr.c
 SRC += vect_grow.c
+SRC += vect_setend.c
 SRC += vect_push.c
 SRC += vect_memset.c
 SRC += vect_pushstr.c
