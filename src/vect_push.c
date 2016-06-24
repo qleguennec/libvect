@@ -6,7 +6,7 @@
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/13 18:40:19 by qle-guen          #+#    #+#             */
-/*   Updated: 2016/06/21 11:09:00 by qle-guen         ###   ########.fr       */
+/*   Updated: 2016/06/24 18:28:45 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,24 +34,22 @@ static int		copy_push
 }
 
 int				vect_push
-	(t_vect **v, void *data, size_t size, size_t n)
+	(t_vect *v, void *data, size_t size, size_t n)
 {
-	if (!*v)
-		return ((*v = vect_init(data, size)) != NULL);
 	if (!data)
 		return (0);
-	if (n >= (*v)->used)
+	if (n >= v->used)
 		return (vect_add(v, data, size));
-	if (!(*v)->total)
+	if (!v->total)
 	{
-		(*v)->total = size;
-		if (!((*v)->data = malloc(size)))
+		v->total = size;
+		if (!(v->data = malloc(size)))
 			return (0);
 	}
-	if ((*v)->total < (*v)->used + size)
-		return (copy_push((*v), data, size, n));
-	ft_memmove((*v)->data + n + size, (*v)->data + n, (*v)->used - n);
-	ft_memcpy((*v)->data + n, data, size);
-	(*v)->used += size;
+	if (v->total < v->used + size)
+		return (copy_push(v, data, size, n));
+	ft_memmove(v->data + n + size, v->data + n, v->used - n);
+	ft_memcpy(v->data + n, data, size);
+	v->used += size;
 	return (1);
 }

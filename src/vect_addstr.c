@@ -6,7 +6,7 @@
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/17 11:00:19 by qle-guen          #+#    #+#             */
-/*   Updated: 2016/06/21 11:15:53 by qle-guen         ###   ########.fr       */
+/*   Updated: 2016/06/24 18:24:50 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <libft.h>
 
 int			vect_addstr
-	(t_vect **v, char *s)
+	(t_vect *v, char *s)
 {
 	return (vect_add(v, s, ft_strlen(s)));
 }

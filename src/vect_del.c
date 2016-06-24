@@ -6,7 +6,7 @@
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/16 23:16:46 by qle-guen          #+#    #+#             */
-/*   Updated: 2016/06/18 13:35:28 by qle-guen         ###   ########.fr       */
+/*   Updated: 2016/06/24 18:25:19 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 #include <libft.h>
 
 void		vect_del
-	(t_vect **v)
+	(t_vect *v)
 {
-	if (!*v)
+	if (!v)
 		return ;
-	free((*v)->data);
-	ft_memdel((void **)v);
+	free(v->data);
+	free(v);
 }
