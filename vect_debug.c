@@ -1,26 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vect_add.c                                         :+:      :+:    :+:   */
+/*   vect_debug.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/06/25 18:39:35 by qle-guen          #+#    #+#             */
-/*   Updated: 2016/06/25 18:39:39 by qle-guen         ###   ########.fr       */
+/*   Created: 2016/06/22 18:37:14 by qle-guen          #+#    #+#             */
+/*   Updated: 2016/06/24 18:29:39 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libvect.h>
-#include <libft.h>
+#include "libvect.h"
+#include <unistd.h>
 
-int				vect_add
-	(t_vect *v, void *data, size_t size)
+void		vect_debug
+	(t_vect *v)
 {
-	if (!data)
-		return (0);
-	if (!vect_req(v, size))
-		return (0);
-	ft_memcpy(v->data + v->used, data, size);
-	v->used += size;
-	return (1);
+	write(1, "debug\t", 6);
+	write(1, v->data, v->used);
+	write(1, "\n", 1);
 }

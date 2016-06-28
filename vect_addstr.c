@@ -1,22 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vect_debug.c                                       :+:      :+:    :+:   */
+/*   vect_addstr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/06/22 18:37:14 by qle-guen          #+#    #+#             */
-/*   Updated: 2016/06/24 18:29:39 by qle-guen         ###   ########.fr       */
+/*   Created: 2016/06/17 11:00:19 by qle-guen          #+#    #+#             */
+/*   Updated: 2016/06/28 16:00:14 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libvect.h>
-#include <unistd.h>
+#include "libvect.h"
+#include "../libft/libft.h"
 
-void		vect_debug
-	(t_vect *v)
+int			vect_addstr
+	(t_vect *v, char *s)
 {
-	write(1, "debug\t", 6);
-	write(1, v->data, v->used);
-	write(1, "\n", 1);
+	return (vect_add(v, s, ft_strlen(s)));
 }

@@ -1,30 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vect_grow.c                                        :+:      :+:    :+:   */
+/*   vect_getstr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/06/16 23:04:21 by qle-guen          #+#    #+#             */
-/*   Updated: 2016/06/24 18:26:07 by qle-guen         ###   ########.fr       */
+/*   Created: 2016/06/16 22:57:50 by qle-guen          #+#    #+#             */
+/*   Updated: 2016/06/28 16:00:56 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libvect.h>
-#include <libft.h>
+#include "libvect.h"
+#include "../libft/libft.h"
 
-int			vect_grow
-	(t_vect *v, size_t n)
+char		*vect_getstr
+	(t_vect *v)
 {
-	void	*new;
-	size_t	new_total;
+	char	*s;
 
-	new_total = v->total * GROWTH_FACTOR * n;
-	if (!(new = malloc(new_total)))
-		return (0);
-	ft_memcpy(new, v->data, v->used);
-	free(v->data);
-	v->data = new;
-	v->total = new_total;
-	return (1);
+	if (!v)
+		return (NULL);
+	return ((s = ft_strnew(v->used)) ? ft_memcpy(s, v->data, v->used) : 0);
 }

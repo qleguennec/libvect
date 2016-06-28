@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vect_getstr.c                                      :+:      :+:    :+:   */
+/*   vect_del.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/06/16 22:57:50 by qle-guen          #+#    #+#             */
-/*   Updated: 2016/06/21 11:16:45 by qle-guen         ###   ########.fr       */
+/*   Created: 2016/06/16 23:16:46 by qle-guen          #+#    #+#             */
+/*   Updated: 2016/06/28 16:00:41 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libvect.h>
-#include <libft.h>
+#include "libvect.h"
+#include "../libft/libft.h"
 
-char		*vect_getstr
+void		vect_del
 	(t_vect *v)
 {
-	char	*s;
-
 	if (!v)
-		return (NULL);
-	return ((s = ft_strnew(v->used)) ? ft_memcpy(s, v->data, v->used) : 0);
+		return ;
+	free(v->data);
+	free(v);
 }

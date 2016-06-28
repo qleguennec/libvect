@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vect_add.c                                         :+:      :+:    :+:   */
+/*   vect_push.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/13 18:40:19 by qle-guen          #+#    #+#             */
-/*   Updated: 2016/06/24 18:28:45 by qle-guen         ###   ########.fr       */
+/*   Updated: 2016/06/28 16:02:03 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libvect.h>
-#include <libft.h>
+#include "libvect.h"
+#include "../libft/libft.h"
 
 static int		copy_push
 	(t_vect *v, void *data, size_t size, size_t n)

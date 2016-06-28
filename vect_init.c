@@ -1,23 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vect_del.c                                         :+:      :+:    :+:   */
+/*   vect_init.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/06/16 23:16:46 by qle-guen          #+#    #+#             */
-/*   Updated: 2016/06/24 18:25:19 by qle-guen         ###   ########.fr       */
+/*   Created: 2016/06/10 16:04:40 by qle-guen          #+#    #+#             */
+/*   Updated: 2016/06/28 16:01:25 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libvect.h>
-#include <libft.h>
+#include "libvect.h"
+#include "../libft/libft.h"
 
-void		vect_del
-	(t_vect *v)
+t_vect			*vect_init
+	(void *data, size_t size)
 {
-	if (!v)
-		return ;
-	free(v->data);
-	free(v);
+	t_vect		*ret;
+
+	if (!(ret = ft_memalloc(sizeof(*ret))))
+		return (NULL);
+	if (size <= 0)
+		return (ret);
+	ret->total = size;
+	if (!(ret->data = malloc(size)))
+		return (NULL);
+	if (!data)
+		return (ret);
+	ret->used = size;
+	ft_memcpy(ret->data, data, size);
+	return (ret);
 }

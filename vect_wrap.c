@@ -6,12 +6,12 @@
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/17 20:51:02 by qle-guen          #+#    #+#             */
-/*   Updated: 2016/06/24 18:29:31 by qle-guen         ###   ########.fr       */
+/*   Updated: 2016/06/28 16:03:23 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libvect.h>
-#include <libft.h>
+#include "libvect.h"
+#include "../libft/libft.h"
 
 t_vect			*vect_wrap
 	(void *data, size_t size)

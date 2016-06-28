@@ -1,20 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vect_addstr.c                                      :+:      :+:    :+:   */
+/*   vect_grow.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/06/17 11:00:19 by qle-guen          #+#    #+#             */
-/*   Updated: 2016/06/24 18:24:50 by qle-guen         ###   ########.fr       */
+/*   Created: 2016/06/16 23:04:21 by qle-guen          #+#    #+#             */
+/*   Updated: 2016/06/28 16:01:11 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libvect.h>
-#include <libft.h>
+#include "libvect.h"
+#include "../libft/libft.h"
 
-int			vect_addstr
-	(t_vect *v, char *s)
+int			vect_grow
+	(t_vect *v, size_t n)
 {
-	return (vect_add(v, s, ft_strlen(s)));
+	void	*new;
+	size_t	new_total;
+
+	new_total = v->total * GROWTH_FACTOR * n;
+	if (!(new = malloc(new_total)))
+		return (0);
+	ft_memcpy(new, v->data, v->used);
+	free(v->data);
+	v->data = new;
+	v->total = new_total;
+	return (1);
 }

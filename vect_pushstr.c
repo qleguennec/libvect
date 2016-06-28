@@ -1,36 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vect_req.c                                         :+:      :+:    :+:   */
+/*   vect_pushstr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/06/25 18:40:10 by qle-guen          #+#    #+#             */
-/*   Updated: 2016/06/25 18:40:12 by qle-guen         ###   ########.fr       */
+/*   Created: 2016/06/17 10:58:12 by qle-guen          #+#    #+#             */
+/*   Updated: 2016/06/28 16:02:21 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libvect.h>
-#include <libft.h>
+#include "libvect.h"
+#include "../libft/libft.h"
 
-int			vect_req
-	(t_vect *v, size_t size)
+int			vect_pushstr
+	(t_vect *v, char *s, size_t n)
 {
-	size_t	n;
-
-	if (!v->total)
-	{
-		if (!(v->data = malloc(size)))
-			return (0);
-		v->total = size;
-		v->used = 0;
-	}
-	if (v->total >= v->used + size)
-		return (1);
-	if (v->total == 1)
-		v->total++;
-	n = 1;
-	while (v->total * n * GROWTH_FACTOR < v->used + size)
-		n++;
-	return (vect_grow(v, size));
+	return (vect_push(v, s, ft_strlen(s), n));
 }
