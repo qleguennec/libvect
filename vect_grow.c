@@ -6,7 +6,7 @@
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/16 23:04:21 by qle-guen          #+#    #+#             */
-/*   Updated: 2016/06/28 16:01:11 by qle-guen         ###   ########.fr       */
+/*   Updated: 2016/07/08 11:13:44 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int			vect_grow
 
 	new_total = v->total * GROWTH_FACTOR * n;
 	if (!(new = malloc(new_total)))
-		return (0);
+		VECT_EXIT;
 	ft_memcpy(new, v->data, v->used);
 	free(v->data);
 	v->data = new;

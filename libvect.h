@@ -6,14 +6,20 @@
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/10 16:01:26 by qle-guen          #+#    #+#             */
-/*   Updated: 2016/07/06 14:15:57 by qle-guen         ###   ########.fr       */
+/*   Updated: 2016/07/15 19:01:16 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBVECT_H
 # define LIBVECT_H
 
-# define GROWTH_FACTOR 1.618
+# define GROWTH_FACTOR	1.618
+
+# ifdef VECT_EXIT_FUNCTION
+# define VECT_EXIT		VECT_EXIT_FUNCTION
+# else
+# define VECT_EXIT		return (0)
+# endif
 
 # include <stdlib.h>
 
@@ -36,7 +42,6 @@ int				vect_pushstr(t_vect *v, char *data, size_t n);
 int				vect_req(t_vect *v, size_t n);
 t_vect			*vect_init(void *data, size_t size);
 t_vect			*vect_wrap(void *data, size_t size);
-void			vect_debug(t_vect *v);
 void			vect_del(t_vect *v);
 
 #endif

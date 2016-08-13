@@ -21,7 +21,6 @@ END			=	"\033[0m"
 
 SRC += vect_add.c
 SRC += vect_addstr.c
-SRC += vect_debug.c
 SRC += vect_del.c
 SRC += vect_getstr.c
 SRC += vect_grow.c

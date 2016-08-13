@@ -6,7 +6,7 @@
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/07/06 14:02:07 by qle-guen          #+#    #+#             */
-/*   Updated: 2016/07/06 14:57:04 by qle-guen         ###   ########.fr       */
+/*   Updated: 2016/07/08 11:12:27 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int			vect_print
 	while (p + buff_size < v->data + v->used)
 	{
 		if (write(fd, p, buff_size) < 0)
-			return (0);
+			VECT_EXIT;
 		p += buff_size;
 	}
 	return (write(fd, p, v->data + v->used - p) < 0 ? 0 : 1);
