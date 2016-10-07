@@ -6,7 +6,7 @@
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/17 20:51:02 by qle-guen          #+#    #+#             */
-/*   Updated: 2016/06/28 16:03:23 by qle-guen         ###   ########.fr       */
+/*   Updated: 2016/10/07 18:51:12 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,7 @@ t_vect			*vect_wrap
 {
 	t_vect		*ret;
 
-	if (!(ret = ft_memalloc(sizeof(*ret))))
-		return (NULL);
+	ret = ft_memalloc(sizeof(*ret));
 	ret->total = size;
 	ret->used = size;
 	ret->data = data;

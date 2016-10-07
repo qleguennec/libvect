@@ -6,11 +6,12 @@
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/16 23:04:21 by qle-guen          #+#    #+#             */
-/*   Updated: 2016/07/08 11:13:44 by qle-guen         ###   ########.fr       */
+/*   Updated: 2016/10/07 19:56:04 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libvect.h"
+#include "../malloc.h"
 #include "../libft/libft.h"
 
 int			vect_grow
@@ -20,8 +21,7 @@ int			vect_grow
 	size_t	new_total;
 
 	new_total = v->total * GROWTH_FACTOR * n;
-	if (!(new = malloc(new_total)))
-		VECT_EXIT;
+	MALLOC(new, new_total);
 	ft_memcpy(new, v->data, v->used);
 	free(v->data);
 	v->data = new;

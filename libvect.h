@@ -6,7 +6,7 @@
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/10 16:01:26 by qle-guen          #+#    #+#             */
-/*   Updated: 2016/09/15 14:09:38 by qle-guen         ###   ########.fr       */
+/*   Updated: 2016/10/07 20:03:16 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,6 @@
 # define LIBVECT_H
 
 # define GROWTH_FACTOR	1.618
-
-# ifdef VECT_EXIT_FUNCTION
-#  define VECT_EXIT		VECT_EXIT_FUNCTION
-# else
-#  define VECT_EXIT		return (0)
-# endif
 
 # include <stdlib.h>
 

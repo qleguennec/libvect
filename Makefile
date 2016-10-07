@@ -27,7 +27,6 @@ SRC += vect_grow.c
 SRC += vect_init.c
 SRC += vect_mset.c
 SRC += vect_mset_end.c
-SRC += vect_print.c
 SRC += vect_push.c
 SRC += vect_pushstr.c
 SRC += vect_req.c
