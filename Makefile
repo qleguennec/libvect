@@ -1,14 +1,11 @@
-# Directories
 PROJECT		=	libvect
 BINDIR		?=	.
 BUILDDIR	?=	build
 NAME		=	$(BINDIR)/libvect.a
 
-# Compiler options
 CC			=	clang
 CFLAGS		=	-Wall -Wextra -Werror -g
 
-# Color output
 BLACK		=	"\033[0;30m"
 RED			=	"\033[0;31m"
 GREEN		=	"\033[0;32m"
