@@ -6,12 +6,12 @@
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/25 18:40:10 by qle-guen          #+#    #+#             */
-/*   Updated: 2016/10/07 20:46:11 by qle-guen         ###   ########.fr       */
+/*   Updated: 2016/11/14 14:56:03 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libvect.h"
-#include "../malloc.h"
+#include "../libft/malloc.h"
 
 int			vect_req
 	(t_vect *v, size_t size)
