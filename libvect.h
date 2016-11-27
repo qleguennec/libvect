@@ -6,7 +6,7 @@
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/10 16:01:26 by qle-guen          #+#    #+#             */
-/*   Updated: 2016/11/26 17:05:00 by qle-guen         ###   ########.fr       */
+/*   Updated: 2016/11/27 14:54:17 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ int				vect_print(int fd, t_vect *v, size_t buff_size);
 int				vect_push(t_vect *v, void *data, size_t size, size_t n);
 int				vect_pushstr(t_vect *v, char *data, size_t n);
 int				vect_req(t_vect *v, size_t n);
+t_vect			*vect_new(void *data, size_t size);
 t_vect			*vect_wrap(void *data, size_t size);
 void			vect_del(t_vect *v);
 void			vect_init(t_vect *v);
