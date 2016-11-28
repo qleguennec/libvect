@@ -6,7 +6,7 @@
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/16 23:16:46 by qle-guen          #+#    #+#             */
-/*   Updated: 2016/06/28 16:00:41 by qle-guen         ###   ########.fr       */
+/*   Updated: 2016/11/28 03:59:07 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ void		vect_del
 {
 	if (!v)
 		return ;
-	free(v->data);
+	if (v->total)
+		free(v->data);
 	free(v);
 }
