@@ -6,7 +6,7 @@
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/10 16:01:26 by qle-guen          #+#    #+#             */
-/*   Updated: 2016/12/23 01:30:48 by qle-guen         ###   ########.fr       */
+/*   Updated: 2016/12/23 01:38:53 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define LIBVECT_H
 
 # define GROWTH_FACTOR	1.618
+
+# define VSTRCMP(v, s)	vect_memcmp(v, s, sizeof(s) - 1)
 
 # include <stdlib.h>
 
@@ -28,6 +30,7 @@ char			*vect_str_get(t_vect *v);
 int				vect_add(t_vect *v, void *data, size_t size);
 int				vect_cmp(t_vect *a, t_vect *b);
 int				vect_grow(t_vect *v, size_t n);
+int				vect_memcmp(t_vect *a, unsigned char *s, size_t n);
 int				vect_mset(t_vect *v, unsigned char c, size_t size, size_t n);
 int				vect_mset_end(t_vect *v, unsigned char c, size_t size);
 int				vect_print(int fd, t_vect *v, size_t buff_size);
