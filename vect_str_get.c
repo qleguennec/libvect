@@ -1,24 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vect_new.c                                         :+:      :+:    :+:   */
+/*   vect_str_get.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/27 14:52:14 by qle-guen          #+#    #+#             */
-/*   Updated: 2016/12/23 01:21:54 by qle-guen         ###   ########.fr       */
+/*   Created: 2016/06/16 22:57:50 by qle-guen          #+#    #+#             */
+/*   Updated: 2016/12/23 01:31:07 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libvect.h"
-#include "../libft/malloc.h"
+#include "../libft/libft.h"
 
-t_vect		*vect_new(void *data, size_t size)
+char		*vect_str_get(t_vect *v)
 {
-	t_vect	*ret;
+	char	*s;
 
-	MALLOC1(ret);
-	vect_init(ret);
-	vect_add(ret, data, size);
-	return (ret);
+	return ((s = ft_strnew(v->used)) ? ft_memcpy(s, v->data, v->used) : 0);
 }

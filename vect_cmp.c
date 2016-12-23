@@ -1,20 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vect_pushstr.c                                     :+:      :+:    :+:   */
+/*   vect_cmp.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/06/17 10:58:12 by qle-guen          #+#    #+#             */
-/*   Updated: 2016/06/28 16:02:21 by qle-guen         ###   ########.fr       */
+/*   Created: 2016/12/23 01:11:13 by qle-guen          #+#    #+#             */
+/*   Updated: 2016/12/23 01:25:24 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libvect.h"
-#include "../libft/libft.h"
 
-int			vect_pushstr
-	(t_vect *v, char *s, size_t n)
+int		vect_cmp(t_vect *a, t_vect *b)
 {
-	return (vect_push(v, s, ft_strlen(s), n));
+	unsigned char	*as;
+	unsigned char	*bs;
+
+	as = a->data;
+	bs = b->data;
+	while ((void *)as < a->data + a->used
+		&& (void *)bs < b->data + b->used
+		&& *as == *bs)
+	{
+		as++;
+		bs++;
+	}
+	return (as - bs);
 }

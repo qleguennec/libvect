@@ -1,22 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vect_getstr.c                                      :+:      :+:    :+:   */
+/*   vect_memcmp.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/06/16 22:57:50 by qle-guen          #+#    #+#             */
-/*   Updated: 2016/10/07 18:46:44 by qle-guen         ###   ########.fr       */
+/*   Created: 2016/12/23 01:24:20 by qle-guen          #+#    #+#             */
+/*   Updated: 2016/12/23 01:31:53 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libvect.h"
-#include "../libft/libft.h"
 
-char		*vect_getstr
-	(t_vect *v)
+int		vect_memcmp(t_vect *a, unsigned char *s, size_t n)
 {
-	char	*s;
+	size_t			i;
+	unsigned char	*s1;
 
-	return ((s = ft_strnew(v->used)) ? ft_memcpy(s, v->data, v->used) : 0);
+	i = 0;
+	s1 = a->data;
+	while (*s1 == *s
+		&& (void *)s1 < a->data + a->used
+		&& *s
+		&& n)
+	{
+		s1++;
+		s++;
+		n++;
+	}
+	return (*s - *s1);
 }
