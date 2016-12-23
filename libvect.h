@@ -6,7 +6,7 @@
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/10 16:01:26 by qle-guen          #+#    #+#             */
-/*   Updated: 2016/12/23 01:38:53 by qle-guen         ###   ########.fr       */
+/*   Updated: 2016/12/23 01:56:51 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # define GROWTH_FACTOR	1.618
 
 # define VSTRCMP(v, s)	vect_memcmp(v, s, sizeof(s) - 1)
+# define VSTRSTR(v, s)	vect_memmem(v, s, sizeof(s) - 1)
 
 # include <stdlib.h>
 
@@ -40,6 +41,7 @@ int				vect_str_add(t_vect *v, char *data);
 int				vect_str_push(t_vect *v, char *s, size_t n);
 t_vect			*vect_new(void *data, size_t size);
 t_vect			*vect_wrap(void *data, size_t size);
+void			*vect_memmem(t_vect *a, unsigned char *s, size_t n);
 void			vect_del(t_vect *v);
 void			vect_init(t_vect *v);
 
