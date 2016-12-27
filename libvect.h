@@ -6,7 +6,7 @@
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/10 16:01:26 by qle-guen          #+#    #+#             */
-/*   Updated: 2016/12/26 15:55:43 by qle-guen         ###   ########.fr       */
+/*   Updated: 2016/12/26 16:01:09 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ int				vect_grow(t_vect *v, size_t n);
 int				vect_memcmp(t_vect *a, unsigned char *s, size_t n);
 int				vect_mset(t_vect *v, unsigned char c, size_t size, size_t n);
 int				vect_mset_end(t_vect *v, unsigned char c, size_t size);
-int				vect_print(int fd, t_vect *v, size_t buff_size);
 int				vect_push(t_vect *v, void *data, size_t size, size_t n);
 int				vect_req(t_vect *v, size_t n);
 int				vect_str_add(t_vect *v, char *data);
