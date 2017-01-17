@@ -6,7 +6,7 @@
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/10 16:01:26 by qle-guen          #+#    #+#             */
-/*   Updated: 2016/12/26 16:01:09 by qle-guen         ###   ########.fr       */
+/*   Updated: 2017/01/17 16:57:11 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,10 @@
 # define LIBVECT_H
 
 # define GROWTH_FACTOR	1.618
+
+# define VECT(p, s)		((t_vect){.data = p, .used = s, .total = s})
+
+# define VECT_ADD(v, d)	(vect_add(p, &d, sizeof(d)))
 
 # define VSTRCMP(v, s)	vect_memcmp(v, s, sizeof(s) - 1)
 # define VSTRSTR(v, s)	vect_memmem(v, s, sizeof(s) - 1)
