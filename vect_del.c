@@ -6,14 +6,15 @@
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/16 23:16:46 by qle-guen          #+#    #+#             */
-/*   Updated: 2016/11/28 03:59:07 by qle-guen         ###   ########.fr       */
+/*   Updated: 2017/03/07 13:02:18 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libvect.h"
 #include "../libft/libft.h"
 
-void		vect_del
+inline void
+	vect_del
 	(t_vect *v)
 {
 	if (!v)

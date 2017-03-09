@@ -6,13 +6,16 @@
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/23 01:11:13 by qle-guen          #+#    #+#             */
-/*   Updated: 2016/12/23 01:25:24 by qle-guen         ###   ########.fr       */
+/*   Updated: 2017/03/07 13:01:55 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libvect.h"
 
-int		vect_cmp(t_vect *a, t_vect *b)
+inline int
+	vect_cmp
+	(t_vect *a
+	, t_vect *b)
 {
 	unsigned char	*as;
 	unsigned char	*bs;

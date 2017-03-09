@@ -6,7 +6,7 @@
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/13 18:40:19 by qle-guen          #+#    #+#             */
-/*   Updated: 2016/11/27 14:07:46 by qle-guen         ###   ########.fr       */
+/*   Updated: 2017/03/07 13:04:33 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,12 @@ static int		copy_push
 	return (1);
 }
 
-int				vect_mset
-	(t_vect *v, unsigned char c, size_t size, size_t n)
+inline int
+	vect_mset
+	(t_vect *v
+	, unsigned char c
+	, size_t size
+	, size_t n)
 {
 	if (n >= v->used)
 	{

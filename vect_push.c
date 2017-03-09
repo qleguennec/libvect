@@ -6,7 +6,7 @@
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/13 18:40:19 by qle-guen          #+#    #+#             */
-/*   Updated: 2016/11/14 14:55:52 by qle-guen         ###   ########.fr       */
+/*   Updated: 2017/03/07 13:05:19 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,17 +24,21 @@ static int		copy_push
 	while (v->total < v->used + size)
 		v->total *= GROWTH_FACTOR;
 	MALLOC(new, v->total);
-	new = ft_mempcpy(new, v->data, n);
-	new = ft_mempcpy(new, data, size);
-	new = ft_mempcpy(new, v->data + n, v->used - n);
+	ft_memcpy(new, v->data, n);
+	ft_memcpy(new + n, data, size);
+	ft_memcpy(new + n + size, v->data + n, v->used - n);
 	free(v->data);
 	v->used += size;
-	v->data = new - v->used;
+	v->data = new;
 	return (1);
 }
 
-int				vect_push
-	(t_vect *v, void *data, size_t size, size_t n)
+inline int
+	vect_push
+	(t_vect *v
+	, void *data
+	, size_t size
+	, size_t n)
 {
 	if (n >= v->used)
 		return (vect_add(v, data, size));

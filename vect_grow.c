@@ -6,7 +6,7 @@
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/16 23:04:21 by qle-guen          #+#    #+#             */
-/*   Updated: 2016/11/14 14:55:06 by qle-guen         ###   ########.fr       */
+/*   Updated: 2017/03/07 13:02:54 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,10 @@
 #include "../libft/malloc.h"
 #include "../libft/libft.h"
 
-int			vect_grow
-	(t_vect *v, size_t n)
+inline int
+	vect_grow
+	(t_vect *v
+	, size_t n)
 {
 	void	*new;
 	size_t	new_total;

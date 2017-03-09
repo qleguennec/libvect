@@ -6,15 +6,18 @@
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/25 18:39:35 by qle-guen          #+#    #+#             */
-/*   Updated: 2016/11/27 14:27:44 by qle-guen         ###   ########.fr       */
+/*   Updated: 2017/03/07 13:01:26 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libvect.h"
 #include "../libft/libft.h"
 
-int				vect_add
-	(t_vect *v, void *data, size_t size)
+inline int
+	vect_add
+	(t_vect *v
+	, void *data
+	, size_t size)
 {
 	vect_req(v, size);
 	if (!data)
