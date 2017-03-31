@@ -13,7 +13,7 @@
 #include "libvect.h"
 #include "../libft/libft.h"
 
-inline int
+int
 	vect_add
 	(t_vect *v
 	, void *data

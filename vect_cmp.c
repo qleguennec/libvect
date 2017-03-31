@@ -12,7 +12,7 @@
 
 #include "libvect.h"
 
-inline int
+int
 	vect_cmp
 	(t_vect *a
 	, t_vect *b)

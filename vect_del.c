@@ -13,7 +13,7 @@
 #include "libvect.h"
 #include "../libft/libft.h"
 
-inline void
+void
 	vect_del
 	(t_vect *v)
 {

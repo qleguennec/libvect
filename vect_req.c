@@ -6,17 +6,17 @@
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/25 18:40:10 by qle-guen          #+#    #+#             */
-/*   Updated: 2017/03/07 13:05:32 by qle-guen         ###   ########.fr       */
+/*   Updated: 2017/03/31 14:22:31 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libvect.h"
 #include "../libft/malloc.h"
 
-inline int
+int
 	vect_req
 	(t_vect *v
-	 , size_t size)
+	, size_t size)
 {
 	size_t	n;
 

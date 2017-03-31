@@ -6,7 +6,7 @@
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/13 18:40:19 by qle-guen          #+#    #+#             */
-/*   Updated: 2017/03/07 13:05:19 by qle-guen         ###   ########.fr       */
+/*   Updated: 2017/03/31 14:23:21 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,12 @@
 #include "../libft/malloc.h"
 #include "../libft/libft.h"
 
-static int		copy_push
-	(t_vect *v, void *data, size_t size, size_t n)
+static int
+	copy_push
+	(t_vect *v
+	, void *data
+	, size_t size
+	, size_t n)
 {
 	void		*new;
 
@@ -33,7 +37,7 @@ static int		copy_push
 	return (1);
 }
 
-inline int
+int
 	vect_push
 	(t_vect *v
 	, void *data

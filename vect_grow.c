@@ -14,7 +14,7 @@
 #include "../libft/malloc.h"
 #include "../libft/libft.h"
 
-inline int
+int
 	vect_grow
 	(t_vect *v
 	, size_t n)

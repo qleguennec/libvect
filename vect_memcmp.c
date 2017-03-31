@@ -12,7 +12,7 @@
 
 #include "libvect.h"
 
-inline int
+int
 	vect_memcmp
 	(t_vect *a
 	, unsigned char *s

@@ -6,7 +6,7 @@
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/10 16:04:40 by qle-guen          #+#    #+#             */
-/*   Updated: 2017/03/07 13:03:16 by qle-guen         ###   ########.fr       */
+/*   Updated: 2017/03/31 14:23:47 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "../libft/malloc.h"
 #include "../libft/libft.h"
 
-inline void
+void
 	vect_init
 	(t_vect *v)
 {
