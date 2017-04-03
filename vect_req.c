@@ -6,7 +6,7 @@
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/25 18:40:10 by qle-guen          #+#    #+#             */
-/*   Updated: 2017/03/31 14:22:31 by qle-guen         ###   ########.fr       */
+/*   Updated: 2017/04/03 12:11:38 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ int
 {
 	size_t	n;
 
+	if (!size)
+		return (0);
 	if (!v->total)
 	{
 		MALLOC(v->data, size);
