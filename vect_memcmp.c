@@ -6,7 +6,7 @@
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/23 01:24:20 by qle-guen          #+#    #+#             */
-/*   Updated: 2017/03/07 13:03:37 by qle-guen         ###   ########.fr       */
+/*   Updated: 2017/04/20 20:25:56 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,8 @@ int
 	, unsigned char *s
 	, size_t n)
 {
-	size_t			i;
 	unsigned char	*s1;
 
-	i = 0;
 	s1 = a->data;
 	while (*s1 == *s
 		&& (void *)s1 < a->data + a->used
