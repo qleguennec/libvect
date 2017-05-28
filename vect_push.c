@@ -6,13 +6,11 @@
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/13 18:40:19 by qle-guen          #+#    #+#             */
-/*   Updated: 2017/03/31 14:23:21 by qle-guen         ###   ########.fr       */
+/*   Updated: 2017/05/28 21:35:37 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libvect.h"
-#include "../libft/malloc.h"
-#include "../libft/libft.h"
 
 static int
 	copy_push
@@ -27,7 +25,9 @@ static int
 		v->total++;
 	while (v->total < v->used + size)
 		v->total *= GROWTH_FACTOR;
-	MALLOC(new, v->total);
+	new = malloc(v->total);
+	if (new == NULL)
+		return (0);
 	ft_memcpy(new, v->data, n);
 	ft_memcpy(new + n, data, size);
 	ft_memcpy(new + n + size, v->data + n, v->used - n);
@@ -49,7 +49,9 @@ int
 	if (!v->total)
 	{
 		v->total = size;
-		MALLOC(v->data, size);
+		v->data = malloc(size);
+		if (v->data == NULL)
+			return (0);
 	}
 	if (v->total < v->used + size)
 		return (copy_push(v, data, size, n));

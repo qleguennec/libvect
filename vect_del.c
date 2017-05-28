@@ -6,12 +6,11 @@
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/16 23:16:46 by qle-guen          #+#    #+#             */
-/*   Updated: 2017/03/07 13:02:18 by qle-guen         ###   ########.fr       */
+/*   Updated: 2017/05/28 22:06:29 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libvect.h"
-#include "../libft/libft.h"
 
 void
 	vect_del

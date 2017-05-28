@@ -6,12 +6,11 @@
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/25 18:40:10 by qle-guen          #+#    #+#             */
-/*   Updated: 2017/04/03 12:11:38 by qle-guen         ###   ########.fr       */
+/*   Updated: 2017/05/28 22:06:01 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libvect.h"
-#include "../libft/malloc.h"
 
 int
 	vect_req
@@ -24,7 +23,9 @@ int
 		return (0);
 	if (!v->total)
 	{
-		MALLOC(v->data, size);
+		v->data = malloc(size);
+		if (v->data == NULL)
+			return (0);
 		v->total = size;
 		v->used = 0;
 	}
