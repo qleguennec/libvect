@@ -6,7 +6,7 @@
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/10 16:01:26 by qle-guen          #+#    #+#             */
-/*   Updated: 2017/05/28 21:31:24 by qle-guen         ###   ########.fr       */
+/*   Updated: 2017/05/28 22:14:59 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # define GROWTH_FACTOR	1.618
 
-# include <stdlib.h>
 #include "../libft/libft.h"
 
 typedef struct	s_vect

@@ -1,5 +1,5 @@
 NAME = libvect.a
-SRC = $(filter %.c, $(shell ls))
+SRC = vect_add.c vect_cmp.c vect_del.c vect_grow.c vect_init.c vect_memcmp.c vect_memmem.c vect_mset.c vect_mset_end.c vect_push.c vect_req.c
 OBJ = $(SRC:.c=.o)
 
 CFLAGS += -g -Wall -Wextra -Werror
