@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vect_err.c                                         :+:      :+:    :+:   */
+/*   add.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/05/29 03:57:28 by qle-guen          #+#    #+#             */
-/*   Updated: 2017/05/29 04:34:10 by qle-guen         ###   ########.fr       */
+/*   Created: 2017/05/29 04:29:43 by qle-guen          #+#    #+#             */
+/*   Updated: 2017/05/29 04:33:06 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libvect.h"
 
 int
-	vect_err
-	(t_vect *v)
+	add
+	(int ret
+		, t_vect *v
+		, char *data)
 {
-	if (v->malloc_err_f)
-		v->malloc_err_f(v);
-	return (0);
+	vect_add(v, data, ft_strlen(data));
+	return (ret);
 }

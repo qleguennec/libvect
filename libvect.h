@@ -6,7 +6,7 @@
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/10 16:01:26 by qle-guen          #+#    #+#             */
-/*   Updated: 2017/05/29 04:02:36 by qle-guen         ###   ########.fr       */
+/*   Updated: 2017/05/29 04:30:49 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,7 @@ void			*vect_memmem(t_vect *a, unsigned char *s, size_t n);
 void			vect_del(t_vect *v);
 void			vect_init(t_vect *v);
 int				vect_err(t_vect *v);
+
+int				add(int ret, t_vect *v, char *data);
 
 #endif
