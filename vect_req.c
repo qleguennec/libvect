@@ -6,7 +6,7 @@
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/25 18:40:10 by qle-guen          #+#    #+#             */
-/*   Updated: 2017/05/28 22:06:01 by qle-guen         ###   ########.fr       */
+/*   Updated: 2017/05/29 04:02:42 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@ int
 		return (0);
 	if (!v->total)
 	{
+		v->total = size;
 		v->data = malloc(size);
 		if (v->data == NULL)
-			return (0);
-		v->total = size;
+			return (vect_err(v));
 		v->used = 0;
 	}
 	if (v->total >= v->used + size)

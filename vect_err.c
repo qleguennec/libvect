@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vect_init.c                                        :+:      :+:    :+:   */
+/*   vect_err.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/06/10 16:04:40 by qle-guen          #+#    #+#             */
-/*   Updated: 2017/05/29 03:53:00 by qle-guen         ###   ########.fr       */
+/*   Created: 2017/05/29 03:57:28 by qle-guen          #+#    #+#             */
+/*   Updated: 2017/05/29 03:59:06 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libvect.h"
 
-void
-	vect_init
+int
+	vect_err
 	(t_vect *v)
 {
-	v->data = NULL;
-	v->used = 0;
-	v->total = 0;
-	v->malloc_err_f = NULL;
+	if (v->malloc_err_f)
+		v->malloc_err_f(v);
+	else
+		return (0);
 }
