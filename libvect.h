@@ -6,7 +6,7 @@
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/10 16:01:26 by qle-guen          #+#    #+#             */
-/*   Updated: 2017/05/29 04:30:49 by qle-guen         ###   ########.fr       */
+/*   Updated: 2017/05/30 16:33:36 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # define GROWTH_FACTOR	1.618
 
+#include <unistd.h>
 #include "../libft/libft.h"
 
 typedef struct	s_vect
@@ -22,7 +23,6 @@ typedef struct	s_vect
 	void		*data;
 	size_t		used;
 	size_t		total;
-	void		(*malloc_err_f)(void *);
 }				t_vect;
 
 int				vect_add(t_vect *v, void *data, size_t size);

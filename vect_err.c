@@ -6,7 +6,7 @@
 /*   By: qle-guen <qle-guen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/29 03:57:28 by qle-guen          #+#    #+#             */
-/*   Updated: 2017/05/29 04:34:10 by qle-guen         ###   ########.fr       */
+/*   Updated: 2017/05/30 16:33:29 by qle-guen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,10 @@ int
 	vect_err
 	(t_vect *v)
 {
-	if (v->malloc_err_f)
-		v->malloc_err_f(v);
+	static const char	*msg = "malloc error\n";
+
+	(void)v;
+	write(1, msg, sizeof(msg) - 1);
+	exit(0);
 	return (0);
 }
